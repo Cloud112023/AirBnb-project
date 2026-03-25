@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "254882828173",
+    "firebase_url": "https://shopping-app-cda83-default-rtdb.firebaseio.com",
+    "project_id": "shopping-app-cda83",
+    "storage_bucket": "shopping-app-cda83.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254882828173:android:ae54594681d798f49db7c4",
+        "android_client_info": {
+          "package_name": "com.example.airbnbportfolio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWfBjGfhBA1LKeDM35y5Ip9D19Qfrs4Hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
