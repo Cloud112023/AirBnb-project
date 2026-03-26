@@ -90,4 +90,15 @@ class UserModel extends Contact {
     country = snapshot['country'] ?? '';
     isHost = snapshot['isHost'] ?? false;
   }
+
+  becomeHost() async {
+    await FirebaseFirestore.instance.collection('users').doc(id).update({
+      'isHost': isHost,
+    });
+    changeCurrentlyHosting(true);
+  }
+
+  changeCurrentlyHosting(bool isHosting) {
+    isCurrentlyHosting = isHosting;
+  }
 }
