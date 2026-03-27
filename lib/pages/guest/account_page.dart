@@ -3,7 +3,6 @@ import 'package:airbnb_portfolio/host/host_home_page.dart';
 import 'package:airbnb_portfolio/pages/auth/login_page.dart';
 import 'package:airbnb_portfolio/pages/guest/guest_home_page.dart';
 import 'package:auto_size_text_plus/auto_size_text_plus.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -58,16 +57,21 @@ class _AccountPageState extends State<AccountPage> {
         TStrings.currentUser.isCurrentlyHosting = true;
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => HostHomePage()),
+          MaterialPageRoute(
+            builder: (context) => HostHomePage(
+              index: 0,
+            ),
+          ),
         );
       }
     } else {
-      TStrings.currentUser.becomeHost().whenComplete({
-        TStrings.currentUser.isCurrentlyHosting = true,
+      TStrings.currentUser.becomeHost().whenComplete(() {
+        TStrings.currentUser.isCurrentlyHosting = true;
+
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => HostHomePage()),
-        ),
+          MaterialPageRoute(builder: (context) => HostHomePage(index: 0)),
+        );
       });
     }
   }

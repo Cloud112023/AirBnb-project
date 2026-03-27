@@ -92,8 +92,9 @@ class UserModel extends Contact {
   }
 
   becomeHost() async {
+    isHost = true;
     await FirebaseFirestore.instance.collection('users').doc(id).update({
-      'isHost': isHost,
+      'isHost': true,
     });
     changeCurrentlyHosting(true);
   }
