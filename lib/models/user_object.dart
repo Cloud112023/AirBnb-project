@@ -99,7 +99,7 @@ class UserModel extends Contact {
     changeCurrentlyHosting(true);
   }
 
-  changeCurrentlyHosting(bool isHosting) {
+  void changeCurrentlyHosting(bool isHosting) {
     isCurrentlyHosting = isHosting;
   }
 }
